@@ -11,13 +11,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Table(name="languages")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -31,6 +29,6 @@ public class Language {
 	@Column(name="name")
 	private String name;
 	
-	@OneToMany(mappedBy="languageTechnology")
+	@OneToMany(mappedBy="language")
 	private List<LanguageTechnology> languageTechnologies;
 }

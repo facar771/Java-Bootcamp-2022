@@ -52,6 +52,7 @@ public class LanguageTechnologyManager implements LanguageTechnologyService{
 			GetAllLanguageTechnologiesResponse responseItem = new GetAllLanguageTechnologiesResponse();
 			responseItem.setId(languageTechnology.getId());
 			responseItem.setName(languageTechnology.getName());
+			responseItem.setLanguage(languageTechnology.getLanguage().getName());
 			getAllLanguageTechnologiesResponses.add(responseItem);
 		}
 		

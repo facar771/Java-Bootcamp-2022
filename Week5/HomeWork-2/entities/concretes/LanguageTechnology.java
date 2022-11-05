@@ -10,13 +10,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Table(name="languageTechnologies")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -31,6 +29,6 @@ public class LanguageTechnology {
 	private String name;
 	
 	@ManyToOne
-	@JoinColumn(name ="languageId")
-	private LanguageTechnology languageTechnology;
+	@JoinColumn(name ="language_id")
+	private Language language;
 }
